@@ -1,0 +1,227 @@
+:root {
+    --primary-color: #3b4d1c; 
+    --secondary-color: #E9DCC0; 
+    --bg-color: #FAFAF5; 
+    --text-dark: #2C3E50;
+    --text-light: #FFFFFF;
+}
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Prompt', sans-serif; 
+}
+
+body { 
+    background-color: var(--bg-color); 
+    color: var(--text-dark); 
+    line-height: 1.6; 
+}
+
+nav { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 1rem 5%; 
+    background-color: rgba(250, 250, 245, 0.98); 
+    position: sticky; 
+    top: 0; 
+    z-index: 100; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+}
+
+.logo { 
+    font-size: 1.6rem; 
+    font-weight: 600; 
+    color: var(--primary-color); 
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a { 
+    margin-left: 25px; 
+    text-decoration: none; 
+    color: var(--text-dark); 
+    transition: color 0.3s; 
+    font-weight: 400;
+}
+
+.nav-links a:hover { 
+    color: var(--primary-color); 
+}
+
+.btn-donate { 
+    background-color: #D35400; 
+    color: white !important; 
+    padding: 10px 22px; 
+    border-radius: 25px; 
+    font-weight: 500; 
+    transition: all 0.3s;
+    box-shadow: 0 4px 10px rgba(211, 84, 0, 0.3);
+}
+
+.btn-donate:hover {
+    background-color: #E67E22;
+    transform: translateY(-2px);
+}
+
+.hero { 
+    min-height: 75vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    color: var(--text-light);
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                url('https://scontent.fcnx4-2.fna.fbcdn.net/v/t39.30808-6/471195833_1159694345512159_1511739356763089182_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=2a1932&_nc_ohc=rIkBIbr9P20Q7kNvwF-YS5R&_nc_oc=AdqcYTpGYsGMO0iuJV0rfl1IAyuDRtKTvavtR8X2VfYIF-puEJbiBrlplp94xKaIySbFQOxl0DuNsHIF4S7m2ZBV&_nc_zt=23&_nc_ht=scontent.fcnx4-2.fna&_nc_gid=cugwUnq4CBZCeFwXaMp7Hw&_nc_ss=7a3a8&oh=00_Af2isCaeFviKA_BOfjp_LzmVVNdBkNElm8Gs-_6reE5Hdg&oe=69DC160B') 
+                center/cover no-repeat;
+}
+
+.hero h1 { 
+    font-size: 3.8rem; 
+    margin-bottom: 5px; 
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.8); 
+}
+
+.hero p { 
+    font-size: 1.5rem; 
+    font-weight: 300; 
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
+}
+
+.dhamma-quote { 
+    background-color: var(--secondary-color); 
+    padding: 4rem 10%; 
+    text-align: center; 
+    color: var(--text-dark); 
+    border-bottom: 4px solid var(--primary-color);
+}
+
+.dhamma-quote p { 
+    font-size: 1.8rem; 
+    font-style: italic; 
+    font-weight: 500; 
+    color: var(--primary-color);
+}
+
+.info-section { 
+    padding: 5rem 10%; 
+    text-align: center; 
+}
+
+.info-section h2 { 
+    margin-bottom: 3.5rem; 
+    color: var(--primary-color); 
+    font-size: 2.2rem; 
+}
+
+.cards { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 2.5rem; 
+}
+
+.card { 
+    background: white; 
+    padding: 3rem 2rem; 
+    border-radius: 15px; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08); 
+    transition: transform 0.3s, box-shadow 0.3s; 
+}
+
+.card:hover { 
+    transform: translateY(-10px); 
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+.card h3 { 
+    color: var(--primary-color); 
+    margin-bottom: 1.2rem; 
+    font-size: 1.4rem;
+}
+
+.card a { 
+    display: inline-block; 
+    margin-top: 1.5rem; 
+    text-decoration: none; 
+    color: var(--primary-color); 
+    font-weight: 600; 
+    position: relative;
+}
+
+.card a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
+    bottom: -4px;
+    left: 0;
+    transition: width 0.3s;
+}
+
+.card a:hover::after {
+    width: 50%;
+}
+
+footer { 
+    background-color: var(--text-dark); 
+    color: var(--text-light); 
+    text-align: center; 
+    padding: 3rem 0; 
+    margin-top: 2rem; 
+}
+
+footer p { 
+    font-size: 1rem; 
+    opacity: 0.8; 
+    margin-bottom: 10px;
+}
+
+.brand-credit {
+    font-size: 0.85rem;
+    color: #D4C4A8;
+    letter-spacing: 2px;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1rem;
+    }
+    
+    .nav-links {
+        flex-wrap: wrap; 
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .nav-links a {
+        margin-left: 0;
+        font-size: 1rem;
+    }
+
+    .hero {
+        min-height: 60vh;
+        padding: 2rem 20px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem; 
+    }
+
+    .dhamma-quote {
+        padding: 3rem 5%;
+    }
+
+    .info-section {
+        padding: 4rem 5%;
+    }
+}
