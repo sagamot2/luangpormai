@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Developer - GUS CREATIVE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="donategus.css">
+</head>
+<body class="donate-page">
+
+    <div class="glass-wrapper">
+        <div class="glass-card">
+            <div class="profile-img">G</div>
+            <h2 class="glass-title">Support "GUS"</h2>
+            <p class="glass-subtitle">ค่าขนม</p>
+
+            <div class="payment-info">
+                <div class="account-item" onclick="copyToClipboard('1338992625', 'เลขบัญชีคัดลอกแล้ว')">
+                    <span class="label">กสิกรไทย (K-Bank)</span>
+                    <div class="value-group">
+                        <span class="value">133-899-2625</span>
+                        <small class="click-hint">แตะเพื่อคัดลอก</small>
+                    </div>
+                </div>
+
+                <div class="account-item" onclick="copyToClipboard('0801138627', 'เบอร์พร้อมเพย์คัดลอกแล้ว')">
+                    <span class="label">พร้อมเพย์ (PromptPay)</span>
+                    <div class="value-group">
+                        <span class="value">080-113-8627</span>
+                        <small class="click-hint">แตะเพื่อคัดลอก</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="qr-container">
+                <img src="พร้อมเพย์.jpg" alt="QR Code Payment" class="qr-image">
+                <p class="qr-hint">สแกนเพื่อโดเนท</p>
+            </div>
+
+            <p class="thanks-msg">
+                "ทุกการสนับสนุนคือกำลังใจที่ยิ่งใหญ่ ขอบคุณมากครับ"
+            </p>
+
+            <a href="index.html" class="btn-back">← กลับหน้าหลัก</a>
+        </div>
+    </div>
+
+    <div id="toast" class="toast">คัดลอกเรียบร้อย!</div>
+
+    <script>
+        function copyToClipboard(text, message) {
+            navigator.clipboard.writeText(text).then(() => {
+                const toast = document.getElementById('toast');
+                toast.innerText = message;
+                toast.classList.add('show');
+                if (navigator.vibrate) navigator.vibrate(50);
+
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
