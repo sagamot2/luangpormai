@@ -4,6 +4,7 @@
     --bg-color: #FAFAF5; 
     --text-dark: #2C3E50;
     --text-light: #FFFFFF;
+    --accent-orange: #D35400;
 }
 
 * { 
@@ -23,205 +24,120 @@ nav {
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
-    padding: 1rem 5%; 
-    background-color: rgba(250, 250, 245, 0.98); 
+    padding: 1.2rem 8%; 
+    background-color: rgba(255, 255, 255, 0.95); 
     position: sticky; 
     top: 0; 
-    z-index: 100; 
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+    z-index: 1000; 
+    box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+    backdrop-filter: blur(10px);
 }
 
 .logo { 
     font-size: 1.6rem; 
     font-weight: 600; 
     color: var(--primary-color); 
-}
-
-.nav-links {
-    display: flex;
-    align-items: center;
+    letter-spacing: 1px;
 }
 
 .nav-links a { 
-    margin-left: 25px; 
+    margin-left: 30px; 
     text-decoration: none; 
     color: var(--text-dark); 
-    transition: color 0.3s; 
+    transition: 0.3s; 
     font-weight: 400;
 }
 
-.nav-links a:hover { 
-    color: var(--primary-color); 
-}
+.nav-links a:hover { color: var(--primary-color); }
 
 .btn-donate { 
-    background-color: #D35400; 
+    background-color: var(--accent-orange); 
     color: white !important; 
-    padding: 10px 22px; 
-    border-radius: 25px; 
+    padding: 10px 25px; 
+    border-radius: 50px; 
     font-weight: 500; 
-    transition: all 0.3s;
-    box-shadow: 0 4px 10px rgba(211, 84, 0, 0.3);
-}
-
-.btn-donate:hover {
-    background-color: #E67E22;
-    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(211, 84, 0, 0.2);
 }
 
 .hero { 
     min-height: 75vh; 
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 0 20px;
     color: var(--text-light);
-   background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
-                url('หลวงปู่ไม อิน.jpg') 
-                center/cover no-repeat;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), 
+                url('หลวงปู่ไม อิน.jpg') center/cover no-repeat;
 }
 
-.hero h1 { 
-    font-size: 3.8rem; 
-    margin-bottom: 5px; 
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.8); 
-}
-
-.hero p { 
-    font-size: 1.5rem; 
-    font-weight: 300; 
-    text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
-}
+.hero h1 { font-size: 4rem; text-shadow: 0 4px 10px rgba(0,0,0,0.5); }
+.hero p { font-size: 1.8rem; font-weight: 300; opacity: 0.9; }
 
 .dhamma-quote { 
     background-color: var(--secondary-color); 
-    padding: 4rem 10%; 
-    text-align: center; 
-    color: var(--text-dark); 
-    border-bottom: 4px solid var(--primary-color);
-}
-
-.dhamma-quote p { 
-    font-size: 1.8rem; 
-    font-style: italic; 
-    font-weight: 500; 
-    color: var(--primary-color);
-}
-
-.info-section { 
     padding: 5rem 10%; 
     text-align: center; 
 }
 
-.info-section h2 { 
-    margin-bottom: 3.5rem; 
-    color: var(--primary-color); 
-    font-size: 2.2rem; 
+.quote-container p { 
+    font-size: 2rem; 
+    font-style: italic; 
+    color: var(--primary-color);
+    margin-bottom: 15px;
 }
+
+.info-section { padding: 6rem 8%; text-align: center; }
+.info-section h2 { margin-bottom: 4rem; color: var(--primary-color); font-size: 2.5rem; }
 
 .cards { 
     display: grid; 
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-    gap: 2.5rem; 
+    gap: 3rem; 
 }
 
 .card { 
     background: white; 
-    padding: 3rem 2rem; 
-    border-radius: 15px; 
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08); 
-    transition: transform 0.3s, box-shadow 0.3s; 
+    padding: 4rem 2rem; 
+    border-radius: 20px; 
+    box-shadow: 0 10px 40px rgba(0,0,0,0.04); 
+    transition: 0.4s;
 }
 
-.card:hover { 
-    transform: translateY(-10px); 
-    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
-}
-
-.card h3 { 
-    color: var(--primary-color); 
-    margin-bottom: 1.2rem; 
-    font-size: 1.4rem;
-}
-
-.card a { 
-    display: inline-block; 
-    margin-top: 1.5rem; 
-    text-decoration: none; 
-    color: var(--primary-color); 
-    font-weight: 600; 
-    position: relative;
-}
-
-.card a::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background-color: var(--primary-color);
-    bottom: -4px;
-    left: 0;
-    transition: width 0.3s;
-}
-
-.card a:hover::after {
-    width: 50%;
-}
+.card:hover { transform: translateY(-12px); box-shadow: 0 20px 50px rgba(0,0,0,0.1); }
+.card-icon { font-size: 3rem; margin-bottom: 20px; }
+.card h3 { color: var(--primary-color); margin-bottom: 1rem; font-size: 1.5rem; }
 
 footer { 
     background-color: var(--text-dark); 
     color: var(--text-light); 
+    padding: 4rem 0; 
     text-align: center; 
-    padding: 3rem 0; 
-    margin-top: 2rem; 
 }
 
-footer p { 
-    font-size: 1rem; 
-    opacity: 0.8; 
-    margin-bottom: 10px;
+.brand-credit { color: #D4C4A8; letter-spacing: 2px; margin-top: 15px; font-size: 0.8rem; }
+
+.modal {
+    display: none; position: fixed; z-index: 9999;
+    left: 0; top: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.7); backdrop-filter: blur(5px);
 }
 
-.brand-credit {
-    font-size: 0.85rem;
-    color: #D4C4A8;
-    letter-spacing: 2px;
+.modal-content {
+    background: white; margin: 10vh auto; width: 90%; max-width: 450px;
+    border-radius: 30px; position: relative; overflow: hidden;
+    animation: modalScale 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
+
+@keyframes modalScale { from { transform: scale(0.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+
+.close-btn { position: absolute; right: 20px; top: 15px; font-size: 28px; cursor: pointer; color: #999; }
+.modal-header { padding: 30px 20px 10px; text-align: center; background: #fff; }
+.modal-body { padding: 0 30px 40px; text-align: center; }
+.modal-body img { width: 100%; height: 220px; object-fit: cover; border-radius: 20px; margin-bottom: 20px; }
 
 @media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        padding: 1rem;
-        gap: 1rem;
-    }
-    
-    .nav-links {
-        flex-wrap: wrap; 
-        justify-content: center;
-        gap: 15px;
-    }
-    
-    .nav-links a {
-        margin-left: 0;
-        font-size: 1rem;
-    }
-
-    .hero {
-        min-height: 60vh;
-        padding: 2rem 20px;
-    }
-
-    .hero h1 {
-        font-size: 2.5rem; 
-    }
-
-    .dhamma-quote {
-        padding: 3rem 5%;
-    }
-
-    .info-section {
-        padding: 4rem 5%;
-    }
+    .hero h1 { font-size: 2.5rem; }
+    nav { flex-direction: column; padding: 1.5rem; }
+    .nav-links { margin-top: 1rem; gap: 10px; }
+    .nav-links a { margin: 0 10px; font-size: 0.9rem; }
 }
