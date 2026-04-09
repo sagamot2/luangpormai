@@ -78,8 +78,8 @@ nav {
     text-align: center;
     padding: 0 20px;
     color: var(--text-light);
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-                url('https://scontent.fcnx4-2.fna.fbcdn.net/v/t39.30808-6/471195833_1159694345512159_1511739356763089182_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=2a1932&_nc_ohc=rIkBIbr9P20Q7kNvwF-YS5R&_nc_oc=AdqcYTpGYsGMO0iuJV0rfl1IAyuDRtKTvavtR8X2VfYIF-puEJbiBrlplp94xKaIySbFQOxl0DuNsHIF4S7m2ZBV&_nc_zt=23&_nc_ht=scontent.fcnx4-2.fna&_nc_gid=cugwUnq4CBZCeFwXaMp7Hw&_nc_ss=7a3a8&oh=00_Af2isCaeFviKA_BOfjp_LzmVVNdBkNElm8Gs-_6reE5Hdg&oe=69DC160B') 
+   background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                url('หลวงปู่ไม อิน.jpg') 
                 center/cover no-repeat;
 }
 
