@@ -1,140 +1,285 @@
 :root {
+
     --primary-color: #3b4d1c; 
+
     --secondary-color: #E9DCC0; 
+
     --bg-color: #FAFAF5; 
+
     --text-dark: #2C3E50;
+
     --text-light: #FFFFFF;
+
     --accent-orange: #D35400;
+
 }
+
+
 
 * { 
+
     margin: 0; 
+
     padding: 0; 
+
     box-sizing: border-box; 
+
     font-family: 'Prompt', sans-serif; 
+
 }
+
+
 
 body { 
+
     background-color: var(--bg-color); 
+
     color: var(--text-dark); 
+
     line-height: 1.6; 
+
 }
+
+
 
 nav { 
+
     display: flex; 
+
     justify-content: space-between; 
+
     align-items: center; 
-    padding: 1rem 8%; 
-    background-color: rgba(255, 255, 255, 0.98); 
+
+    padding: 1.2rem 8%; 
+
+    background-color: rgba(255, 255, 255, 0.95); 
+
     position: sticky; 
+
     top: 0; 
+
     z-index: 1000; 
+
     box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+
     backdrop-filter: blur(10px);
+
 }
+
+
 
 .logo { 
-    font-size: 1.4rem; 
+
+    font-size: 1.6rem; 
+
     font-weight: 600; 
+
     color: var(--primary-color); 
+
     letter-spacing: 1px;
+
 }
 
-.nav-links {
-    display: flex;
-    align-items: center;
-}
+
 
 .nav-links a { 
-    margin-left: 25px; 
+
+    margin-left: 30px; 
+
     text-decoration: none; 
+
     color: var(--text-dark); 
+
     transition: 0.3s; 
+
     font-weight: 400;
+
 }
+
+
 
 .nav-links a:hover { color: var(--primary-color); }
 
+
+
 .btn-donate { 
+
     background-color: var(--accent-orange); 
+
     color: white !important; 
-    padding: 8px 20px; 
+
+    padding: 10px 25px; 
+
     border-radius: 50px; 
+
     font-weight: 500; 
+
     box-shadow: 0 4px 15px rgba(211, 84, 0, 0.2);
-    display: inline-block;
+
 }
+
+
 
 .hero { 
+
     min-height: 75vh; 
+
     display: flex;
+
     justify-content: center;
+
     align-items: center;
+
     text-align: center;
+
     color: var(--text-light);
+
     background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), 
+
                 url('หลวงปู่ไม อิน.jpg') center/cover no-repeat;
+
 }
 
-.hero h1 { font-size: 3.5rem; text-shadow: 0 4px 10px rgba(0,0,0,0.5); padding: 0 20px; }
 
-/* --- Section อื่นๆ --- */
-.dhamma-quote { background-color: var(--secondary-color); padding: 5rem 10%; text-align: center; }
-.quote-container p { font-size: 1.8rem; font-style: italic; color: var(--primary-color); margin-bottom: 15px; }
+
+.hero h1 { font-size: 4rem; text-shadow: 0 4px 10px rgba(0,0,0,0.5); }
+
+.hero p { font-size: 1.8rem; font-weight: 300; opacity: 0.9; }
+
+
+
+.dhamma-quote { 
+
+    background-color: var(--secondary-color); 
+
+    padding: 5rem 10%; 
+
+    text-align: center; 
+
+}
+
+
+
+.quote-container p { 
+
+    font-size: 2rem; 
+
+    font-style: italic; 
+
+    color: var(--primary-color);
+
+    margin-bottom: 15px;
+
+}
+
+
+
 .info-section { padding: 6rem 8%; text-align: center; }
-.info-section h2 { margin-bottom: 3rem; color: var(--primary-color); font-size: 2.2rem; }
+
+.info-section h2 { margin-bottom: 4rem; color: var(--primary-color); font-size: 2.5rem; }
+
+
 
 .cards { 
+
     display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-    gap: 2rem; 
+
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+
+    gap: 3rem; 
+
 }
+
+
 
 .card { 
+
     background: white; 
-    padding: 3rem 1.5rem; 
+
+    padding: 4rem 2rem; 
+
     border-radius: 20px; 
+
     box-shadow: 0 10px 40px rgba(0,0,0,0.04); 
+
     transition: 0.4s;
+
 }
 
-.card:hover { transform: translateY(-10px); }
 
-footer { background-color: var(--text-dark); color: var(--text-light); padding: 3rem 0; text-align: center; }
+
+.card:hover { transform: translateY(-12px); box-shadow: 0 20px 50px rgba(0,0,0,0.1); }
+
+.card-icon { font-size: 3rem; margin-bottom: 20px; }
+
+.card h3 { color: var(--primary-color); margin-bottom: 1rem; font-size: 1.5rem; }
+
+
+
+footer { 
+
+    background-color: var(--text-dark); 
+
+    color: var(--text-light); 
+
+    padding: 4rem 0; 
+
+    text-align: center; 
+
+}
+
+
+
+.brand-credit { color: #D4C4A8; letter-spacing: 2px; margin-top: 15px; font-size: 0.8rem; }
+
+
+
+.modal {
+
+    display: none; position: fixed; z-index: 9999;
+
+    left: 0; top: 0; width: 100%; height: 100%;
+
+    background: rgba(0,0,0,0.7); backdrop-filter: blur(5px);
+
+}
+
+
+
+.modal-content {
+
+    background: white; margin: 10vh auto; width: 90%; max-width: 450px;
+
+    border-radius: 30px; position: relative; overflow: hidden;
+
+    animation: modalScale 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+}
+
+
+
+@keyframes modalScale { from { transform: scale(0.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+
+
+
+.close-btn { position: absolute; right: 20px; top: 15px; font-size: 28px; cursor: pointer; color: #999; }
+
+.modal-header { padding: 30px 20px 10px; text-align: center; background: #fff; }
+
+.modal-body { padding: 0 30px 40px; text-align: center; }
+
+.modal-body img { width: 100%; height: 220px; object-fit: cover; border-radius: 20px; margin-bottom: 20px; }
+
+
 
 @media (max-width: 768px) {
-    nav {
-        padding: 1rem;
-        flex-direction: column;
-        gap: 12px;
-    }
 
-    .logo {
-        font-size: 1.3rem;
-    }
+    .hero h1 { font-size: 2.5rem; }
 
-    .nav-links {
-        width: 100%;
-        justify-content: center;
-        flex-wrap: wrap; 
-        gap: 10px;
-    }
+    nav { flex-direction: column; padding: 1.5rem; }
 
-    .nav-links a {
-        margin: 0 8px;
-        font-size: 0.95rem;
-    }
+    .nav-links { margin-top: 1rem; gap: 10px; }
 
-    .btn-donate {
-        margin-top: 5px;
-        padding: 6px 15px;
-    }
+    .nav-links a { margin: 0 10px; font-size: 0.9rem; }
 
-    .hero {
-        min-height: 60vh;
-    }
-
-    .hero h1 {
-        font-size: 2rem;
-    }
 }
