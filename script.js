@@ -17,3 +17,19 @@ window.onload = function() {
         quoteElement.style.opacity = 1;
     }, 200);
 };
+document.addEventListener("DOMContentLoaded", function() {
+    const modal = document.getElementById("newsModal");
+    const closeBtn = document.querySelector(".close-btn");
+    if (!sessionStorage.getItem('shown-modal')) {
+        setTimeout(() => {
+            modal.style.display = "block";
+            sessionStorage.setItem('shown-modal', 'true');
+        }, 1500); 
+    }
+
+    closeBtn.onclick = () => modal.style.display = "none";
+    
+    window.onclick = (event) => {
+        if (event.target == modal) modal.style.display = "none";
+    }
+});
