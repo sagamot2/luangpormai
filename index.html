@@ -3,22 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>วัดป่าเขาภูหลวง</title>
+    <title>วัดป่าเขาภูหลวง (หลวงปู่ไม อินทสิริ)</title>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <meta property="og:title" content="วัดป่าเขาภูหลวง (หลวงปู่ไม อินทสิริ)">
-    <meta property="og:description" content="เว็บไซต์รวบรวมประวัติและพระธรรมเทศนา หลวงปู่ไม อินทสิริ">
-    <meta property="og:image" content="https://scontent.fcnx4-2.fna.fbcdn.net/v/t39.30808-6/661939919_1515965649885025_1764131767547194703_n.jpg?stp=dst-jpg_s720x720_tt6&_nc_cat=110&ccb=1-7&_nc_sid=7b2446&_nc_ohc=5LgezqKrUNQQ7kNvwH4qyWH&_nc_oc=AdpOe11pLJJa2hbE_giorZf_v2AJINw_9B-JsppvM2RXU5P0gKUdMCJwnLoXYXgBRBwEy4Cuzy3hDtKBBFivjATZ&_nc_zt=23&_nc_ht=scontent.fcnx4-2.fna&_nc_gid=KA9ctbjN6d3tVB0lVUTh4A&_nc_ss=7a3a8&oh=00_Af1VaLbhUiDdjv3W_RJEQf9BheD_q0umM-t9Sq6WowyY0w&oe=69DC0FA1">
-    <meta property="og:url" content="https://luangpoomai.netlify.app/">
-    <meta property="og:type" content="website">
 </head>
-<body>
 <body>
 
     <nav>
         <div class="logo">วัดป่าเขาภูหลวง</div>
         <div class="nav-links">
-            <a href="index.html" class="active">หน้าหลัก</a>
+            <a href="index.html">หน้าหลัก</a>
             <a href="history.html">ประวัติ</a>
             <a href="gallery.html">รูปภาพ</a>
             <a href="teachings.html">รวมเทศน์</a>
@@ -32,22 +26,32 @@
     </section>
 
     <section class="dhamma-quote">
-        <p id="quote-text">"กำลังโหลดธรรมะ..."</p>
-        <small style="display:block; margin-top:15px; font-size:1.1rem;">- หลวงปู่ไม อินทสิริ -</small>
+        <div class="quote-container">
+            <p id="quote-text">"กำลังโหลดธรรมะ..."</p>
+            <small>- หลวงปู่ไม อินทสิริ -</small>
+        </div>
     </section>
 
     <section class="info-section">
         <h2>ข้อมูลที่น่าสนใจ</h2>
         <div class="cards">
             <div class="card">
+                <div class="card-icon">📖</div>
                 <h3>ประวัติและความเป็นมา</h3>
                 <p>เรียนรู้เรื่องราวการก่อตั้งวัดป่าเขาภูหลวง และชีวประวัติของหลวงปู่ไม อินทสิริ</p>
                 <a href="history.html">อ่านเพิ่มเติม</a>
             </div>
             <div class="card">
-                <h3>ร่วมสมทบทุนบำรุงวัด</h3>
-                <p>ช่องทางร่วมบุญรับบริจาคค่าน้ำ ค่าไฟ และบำรุงเสนาสนะวัดป่าเขาภูหลวงที่ถูกต้อง</p>
-                <a href="donate.html">ดูรายละเอียด</a>
+                <div class="card-icon">📍</div>
+                <h3>ช่องทางการติดต่อ</h3>
+                <p>แผนที่การเดินทาง เบอร์โทรศัพท์ และช่องทางร่วมบุญรับบริจาคที่ถูกต้อง</p>
+                <a href="donate.html">ติดต่อวัด</a>
+            </div>
+            <div class="card">
+                <div class="card-icon">📢</div>
+                <h3>ข่าวสารประชาสัมพันธ์</h3>
+                <p>ติดตามกิจกรรม งานบุญ และข่าวประกาศล่าสุดจากทางวัดป่าเขาภูหลวง</p>
+                <a href="news.html">ดูข่าวสาร</a>
             </div>
         </div>
     </section>
@@ -56,6 +60,21 @@
         <p>&copy; 2026 วัดป่าเขาภูหลวง. All Rights Reserved.</p>
         <div class="brand-credit">Designed & Developed by GUS CREATIVE</div>
     </footer>
+
+    <div id="newsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-header">
+                <h2>📢 ข่าวสารประชาสัมพันธ์</h2>
+            </div>
+            <div class="modal-body">
+                <img src="ทำบุญ.jpg" alt="ข่าวสารวัด">
+                <h3>ขอเชิญร่วมงานบุญใหญ่</h3>
+                <p> แจ้งความประสงค์เป็นเจ้าภาพหินส่วนเอวขันธ์แล้ว 12 ท่าน </p>
+                <a href="news.html" class="btn-read-more">รายละเอียดเพิ่มเติม</a>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
