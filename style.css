@@ -64,24 +64,26 @@ nav {
     position: relative;
     overflow: hidden;
     width: 100%;
+    background: radial-gradient(circle, #2c1a0a 0%, #110904 100%);
 }
 
 .hero-slides {
     position: absolute;
     top: 0;
     left: 0;
-    width: 500%; /* รองรับ 5 รูป */
+    width: 500%; 
     height: 100%;
     display: flex;
-    animation: slideShow5 25s infinite; /* รูปละ 5 วินาที */
+    animation: slideShow5 25s infinite; 
 }
 
 .slide {
-    width: 20%; /* แบ่งพื้นที่รูปละ 1 ใน 5 */
+    width: 20%; 
     height: 100%;
-    background-size: cover;
-    background-position: center;
+    background-size: contain; 
+    background-position: center; 
     background-repeat: no-repeat;
+    filter: drop-shadow(0 0 30px rgba(0,0,0,0.4));
 }
 
 .hero-content {
@@ -93,12 +95,12 @@ nav {
     width: 100%;
     text-align: center;
     color: var(--text-light);
+    pointer-events: none;
 }
 
-.hero h1 { font-size: 4rem; text-shadow: 0 4px 10px rgba(0,0,0,0.5); }
+.hero h1 { font-size: 4rem; text-shadow: 0 4px 10px rgba(0,0,0,0.6); }
 .hero p { font-size: 1.8rem; font-weight: 300; opacity: 0.9; }
 
-/* คำนวณ Keyframes สำหรับ 5 รูป */
 @keyframes slideShow5 {
     0%, 16% { transform: translateX(0); }
     20%, 36% { transform: translateX(-20%); }
@@ -232,8 +234,9 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .hero h1 { font-size: 2.5rem; }
-    .hero p { font-size: 1.2rem; }
+    .hero { min-height: 60vh; }
+    .hero h1 { font-size: 2.2rem; }
+    .hero p { font-size: 1.1rem; }
     nav { 
         flex-direction: column; 
         padding: 1rem; 
@@ -258,7 +261,7 @@ footer {
         display: inline-block;
     }
     .support-container {
-        max-width: 320px;
+        max-width: 340px;
         padding: 0.6rem 1rem;
     }
-} 
+}
