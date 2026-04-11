@@ -1,4 +1,4 @@
-:root {
+ฃ:root {
     --primary-color: #3b4d1c; 
     --secondary-color: #E9DCC0; 
     --bg-color: #FAFAF5; 
@@ -20,6 +20,7 @@ body {
     line-height: 1.6; 
 }
 
+/* NAV */
 nav { 
     display: flex; 
     justify-content: space-between; 
@@ -59,58 +60,18 @@ nav {
     box-shadow: 0 4px 15px rgba(211, 84, 0, 0.2);
 }
 
+/* HERO (โหมดไม่มีรูป) */
 .hero { 
-    min-height: 75vh; 
-    position: relative; 
-    overflow: hidden; 
-    width: 100%; 
-    background-color: #ffffff; 
-}
-
-.hero-slides {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 1000%;
-    height: 100%;
+    min-height: 40vh; /* ลดความสูงลงเมื่อไม่มีรูป */
     display: flex;
-    animation: marqueeScroll   150s linear infinite; 
-}
-
-.slide {
-    width: 10%; 
-    height: 100%;
-    background-size: contain; 
-    background-position: center; 
-    background-repeat: no-repeat;
-    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.08));
-}
-
-@keyframes marqueeScroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-}
-
-.hero-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 3;
-    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff; 
     text-align: center;
-    color: var(--primary-color);
-    pointer-events: none;
-}
-@keyframes slideShow5 {
-    0%, 16% { transform: translateX(0); }
-    20%, 36% { transform: translateX(-20%); }
-    40%, 56% { transform: translateX(-40%); }
-    60%, 76% { transform: translateX(-60%); }
-    80%, 96% { transform: translateX(-80%); }
-    100% { transform: translateX(0); }
+    padding: 0 8%;
 }
 
+/* SECTION QUOTE */
 .dhamma-quote { 
     background-color: var(--secondary-color); 
     padding: 5rem 10%; 
@@ -124,6 +85,7 @@ nav {
     margin-bottom: 15px;
 }
 
+/* CARDS SECTION */
 .info-section { padding: 6rem 8%; text-align: center; }
 .info-section h2 { margin-bottom: 4rem; color: var(--primary-color); font-size: 2.5rem; }
 
@@ -145,34 +107,7 @@ nav {
 .card-icon { font-size: 3rem; margin-bottom: 20px; }
 .card h3 { color: var(--primary-color); margin-bottom: 1rem; font-size: 1.5rem; }
 
-footer { 
-    background-color: var(--text-dark); 
-    color: var(--text-light); 
-    padding: 4rem 0; 
-    text-align: center; 
-}
-
-.brand-credit { color: #D4C4A8; letter-spacing: 2px; margin-top: 15px; font-size: 0.8rem; }
-
-.modal {
-    display: none; position: fixed; z-index: 9999;
-    left: 0; top: 0; width: 100%; height: 100%;
-    background: rgba(0,0,0,0.7); backdrop-filter: blur(5px);
-}
-
-.modal-content {
-    background: white; margin: 10vh auto; width: 90%; max-width: 450px;
-    border-radius: 30px; position: relative; overflow: hidden;
-    animation: modalScale 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-@keyframes modalScale { from { transform: scale(0.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }
-
-.close-btn { position: absolute; right: 20px; top: 15px; font-size: 28px; cursor: pointer; color: #999; }
-.modal-header { padding: 30px 20px 10px; text-align: center; background: #fff; }
-.modal-body { padding: 0 30px 40px; text-align: center; }
-.modal-body img { width: 100%; height: 220px; object-fit: cover; border-radius: 20px; margin-bottom: 20px; }
-
+/* SUPPORT */
 .support-creator {
     background-color: transparent;
     padding: 1.5rem 8%;
@@ -191,34 +126,6 @@ footer {
     box-shadow: 0 5px 15px rgba(0,0,0,0.02);
 }
 
-.support-content {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.support-icon {
-    font-size: 1.1rem;
-    background: #fdfaf3;
-    width: 35px;
-    height: 35px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-}
-
-.support-text h4 {
-    color: var(--text-dark);
-    font-size: 0.85rem;
-    font-weight: 500;
-}
-
-.support-text p {
-    font-size: 0.75rem;
-    color: #95a5a6;
-}
-
 .btn-support {
     text-decoration: none;
     background: var(--primary-color); 
@@ -228,44 +135,27 @@ footer {
     font-size: 0.9rem;
     font-weight: 600; 
     transition: 0.3s;
-    display: inline-block;
-    box-shadow: 0 4px 12px rgba(59, 77, 28, 0.2);
 }
 
-.btn-support:hover {
-    background: var(--text-dark); 
-    transform: translateY(-2px); 
-    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+/* FOOTER */
+footer { 
+    background-color: var(--text-dark); 
+    color: var(--text-light); 
+    padding: 4rem 0; 
+    text-align: center; 
 }
+
+.brand-credit { color: #D4C4A8; letter-spacing: 2px; margin-top: 15px; font-size: 0.8rem; }
+
+/* MEDIA QUERIES */
 @media (max-width: 768px) {
-    .hero { min-height: 60vh; }
-    .hero h1 { font-size: 2.2rem; }
-    .hero p { font-size: 1.1rem; }
     nav { 
         flex-direction: column; 
         padding: 1rem; 
         gap: 10px; 
     }
-    .nav-links { 
-        margin-top: 0.5rem; 
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        gap: 10px; 
-    }
     .nav-links a { 
         margin: 0 5px; 
         font-size: 0.85rem; 
-    }
-    .btn-donate { 
-        white-space: nowrap; 
-        padding: 6px 15px; 
-        margin-top: 5px;
-        display: inline-block;
-    }
-    .support-container {
-        max-width: 340px;
-        padding: 0.6rem 1rem;
     }
 }
