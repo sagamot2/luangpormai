@@ -1,14 +1,3 @@
-:root {
-  --primary: #3b4d1c;
-  --gold: #8B5E1A;
-  --cream: #E9DCC0;
-  --bg: #FAFAF5;
-  --text: #2C3E50;
-  --accent: #D35400;
-}
-
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
 
 body {
   background: var(--bg);
