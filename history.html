@@ -3,52 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>กำลังแก้ไข — วัดป่าเขาภูหลวง</title>
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="history.css">
+    <title>วัดป่าเขาภูหลวง (หลวงปู่ไม อินทสิริ)</title>
+
+    <!-- SEO -->
+    <meta name="description" content="วัดป่าเขาภูหลวง ต.ระเริง อ.วังน้ำเขียว จ.นครราชสีมา — ชีวประวัติและธรรมะของหลวงปู่ไม อินทสิริ">
+    <meta name="keywords" content="หลวงปู่ไม อินทสิริ, วัดป่าเขาภูหลวง, วังน้ำเขียว, นครราชสีมา, ธรรมะ">
+
+    <!-- OG Facebook -->
+    <meta property="og:title" content="วัดป่าเขาภูหลวง — หลวงปู่ไม อินทสิริ">
+    <meta property="og:description" content="ร่วมทำบุญและศึกษาธรรมะกับหลวงปู่ไม อินทสิริ วัดป่าเขาภูหลวง อ.วังน้ำเขียว จ.นครราชสีมา">
+    <meta property="og:image" content="https://luangpormai.netlify.app/หลวงปู่ไม อิน.jpg">
+    <meta property="og:url" content="https://luangpormai.netlify.app/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="th_TH">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="วัดป่าเขาภูหลวง — หลวงปู่ไม อินทสิริ">
+    <meta name="twitter:description" content="ร่วมทำบุญและศึกษาธรรมะกับหลวงปู่ไม อินทสิริ">
+    <meta name="twitter:image" content="https://luangpormai.netlify.app/หลวงปู่ไม อิน.jpg">
+
+    <meta name="google-site-verification" content="f4Xp0F7fAuIu79jj4sP2wI35b7xC9J57ZqH1atgwiCA" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="card">
-            <div class="top-row">
-                <span class="dot red"></span>
-                <span class="dot yellow"></span>
-                <span class="dot green"></span>
-            </div>
 
-            <div class="icon-wrap">
-                <div class="icon-ring">
-                    <span class="bug-emoji">🪲</span>
+    <nav>
+        <div class="logo">วัดป่าเขาภูหลวง</div>
+        <button class="hamburger" id="hamburger" aria-label="เมนู">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links" id="navLinks">
+            <a href="index.html">หน้าหลัก</a>
+            <a href="history.html">ประวัติ</a>
+            <a href="teachings.html">รวมเทศน์</a>
+            <a href="donate.html" class="btn-donate">ร่วมทำบุญ</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-slides">
+            <div class="slide" style="background-image: url('หลวงปู่.jpg');"></div>
+            <div class="slide" style="background-image: url('หลวงปู่ไม อิน.jpg');"></div>
+            <div class="slide" style="background-image: url('อนุโม.jpg');"></div>
+            <div class="slide" style="background-image: url('อนุโม2.jpg');"></div>
+            <div class="slide" style="background-image: url('อนุโม3.jpg');"></div>
+            <div class="slide" style="background-image: url('หลวงปู่.jpg');"></div>
+            <div class="slide" style="background-image: url('หลวงปู่ไม อิน.jpg');"></div>
+            <div class="slide" style="background-image: url('อนุโม.jpg');"></div>
+            <div class="slide" style="background-image: url('อนุโม2.jpg');"></div>
+            <div class="slide" style="background-image: url('อนุโม3.jpg');"></div>
+        </div>
+    </section>
+
+    <section class="dhamma-quote">
+        <div class="quote-container">
+            <p id="quote-text">"กำลังโหลดธรรมะ..."</p>
+            <small>- หลวงปู่ไม อินทสิริ -</small>
+        </div>
+    </section>
+
+    <section class="info-section">
+        <h2>ข้อมูลที่น่าสนใจ</h2>
+        <div class="cards">
+            <div class="card">
+                <div class="card-icon">📖</div>
+                <h3>ประวัติและความเป็นมา</h3>
+                <p>เรียนรู้เรื่องราวการก่อตั้งวัดป่าเขาภูหลวง และชีวประวัติของหลวงปู่ไม อินทสิริ</p>
+                <a href="history.html">อ่านเพิ่มเติม</a>
+            </div>
+            <div class="card">
+                <div class="card-icon">📍</div>
+                <h3>ช่องทางการติดต่อ</h3>
+                <p>แผนที่การเดินทาง เบอร์โทรศัพท์ และช่องทางร่วมบุญรับบริจาคที่ถูกต้อง</p>
+                <a href="donate.html">ติดต่อวัด</a>
+            </div>
+            <div class="card">
+                <div class="card-icon">📢</div>
+                <h3>ข่าวสารประชาสัมพันธ์</h3>
+                <p>ติดตามกิจกรรม งานบุญ และข่าวประกาศล่าสุดจากทางวัดป่าเขาภูหลวง</p>
+                <a href="news.html">ดูข่าวสาร</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="support-creator">
+        <div class="support-container">
+            <div class="support-content">
+                <span class="support-icon">☕</span>
+                <div class="support-text">
+                    <h4>สนับสนุนผู้พัฒนา</h4>
+                    <p>ขอขอบคุณทุกการสนับสนุนครับ!</p>
                 </div>
             </div>
+            <a href="donategus.html" target="_blank" class="btn-support">สนับสนุนที่นี่</a>
+        </div>
+    </section>
 
-            <h1>SYSTEM DEBUG</h1>
-            <p>กำลังแก้ รอแปปครับ วุ่นกับ bug มาก</p>
+    <footer>
+        <p>&copy; 2026 วัดป่าเขาภูหลวง. All Rights Reserved.</p>
+        <div class="brand-credit">Designed & Developed by GUS CREATIVE</div>
+    </footer>
 
-            <div class="log-box">
-                <div class="log-line info" id="l1">&gt; scanning files...</div>
-                <div class="log-line err"  id="l2">&gt; [ERR] anchor link missing</div>
-                <div class="log-line ok"   id="l3">&gt; hero-fix.css → applied ✓</div>
-                <div class="log-line warn" id="l4">&gt; [WARN] og:image not set</div>
+    <div id="newsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-header">
+                <h2>📢 ข่าวสารประชาสัมพันธ์</h2>
             </div>
-
-            <div class="progress-wrap">
-                <div class="progress-fill"></div>
-            </div>
-            <div class="progress-labels">
-                <span class="dot-step on"></span>
-                <span class="dot-step on"></span>
-                <span class="dot-step"></span>
-                <span class="dot-step"></span>
-                <span class="dot-step"></span>
-            </div>
-
-            <span class="status-text">FIXING INCONSISTENCIES...</span>
-
-            <div class="action-area">
-                <a href="index.html" class="btn-back">← ย้อนกลับหน้าแรก</a>
+            <div class="modal-body">
+                <img src="ทำบุญ.jpg" alt="ข่าวสารวัด">
+                <h3>ขอเชิญร่วมงานบุญใหญ่</h3>
+                <p>แจ้งความประสงค์เป็นเจ้าภาพหินส่วนเอวขันธ์แล้ว 12 ท่าน</p>
+                <a href="news.html" class="btn-read-more">รายละเอียดเพิ่มเติม</a>
             </div>
         </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
