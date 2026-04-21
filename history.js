@@ -1,44 +1,23 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const openMenu = document.getElementById('openMenu');
-    const closeMenu = document.getElementById('closeMenu');
-    const sidebar = document.getElementById('sidebarMenu');
-    const overlay = document.getElementById('menuOverlay');
-    const tocLinks = document.querySelectorAll('.toc-link');
-
-    function toggleMenu() {
-        sidebar.classList.toggle('active');
-        overlay.classList.toggle('active');
-    }
-
-    if (openMenu) openMenu.addEventListener('click', toggleMenu);
-    if (closeMenu) closeMenu.addEventListener('click', toggleMenu);
-    if (overlay) overlay.addEventListener('click', toggleMenu);
-
-    tocLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            if (window.innerWidth <= 768) {
-                toggleMenu();
-            }
-        });
-    });
-
-    const sections = document.querySelectorAll('section[id]');
-    
-    window.addEventListener('scroll', () => {
-        let current = "";
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            if (pageYOffset >= (sectionTop - 150)) {
-                current = section.getAttribute('id');
-            }
-        });
-
-        tocLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href').includes(current)) {
-                link.classList.add('active');
-            }
-        });
-    });
+  const bar = document.getElementById('reading-progress');
+  window.addEventListener('scroll', () => {
+    const total = document.body.scrollHeight - window.innerHeight;
+    bar.style.width = (window.scrollY / total * 100) + '%';
+  });
+  const openMenu = document.getElementById('openMenu');
+  const closeMenu = document.getElementById('closeMenu');
+  const sidebar = document.getElementById('sidebarMenu');
+  const overlay = document.getElementById('menuOverlay');
+  const toggle = () => { sidebar.classList.toggle('active'); overlay.classList.toggle('active'); };
+  openMenu?.addEventListener('click', toggle);
+  closeMenu?.addEventListener('click', toggle);
+  overlay?.addEventListener('click', toggle);
+  document.querySelectorAll('.toc-link').forEach(a => a.addEventListener('click', () => { if(window.innerWidth<=768) toggle(); }));
+  const sections = document.querySelectorAll('section[id]');
+  const tocLinks = document.querySelectorAll('.toc-link');
+  window.addEventListener('scroll', () => {
+    let cur = '';
+    sections.forEach(s => { if(window.scrollY >= s.offsetTop - 160) cur = s.id; });
+    tocLinks.forEach(a => { a.classList.toggle('active', a.getAttribute('href') === '#'+cur); });
+  });
 });
