@@ -1,28 +1,27 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ประวัติและความเป็นมา - วัดป่าเขาภูหลวง</title>
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&family=Sarabun:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="history.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ประวัติหลวงปู่ไม อินทสิริ — วัดป่าเขาภูหลวง</title>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&family=Noto+Serif+Thai:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="history.css">
 </head>
 <body>
 
-<button class="floating-menu-btn" id="openMenu">
-    <span>สารบัญเนื้อหา</span>
-    <div class="menu-icon">
-        <span></span><span></span><span></span>
-    </div>
-</button>
+<div id="reading-progress"></div>
 
+<button class="floating-menu-btn" id="openMenu">
+  <span>สารบัญ</span>
+  <div class="menu-icon"><span></span><span></span><span></span></div>
+</button>
 <div class="menu-overlay" id="menuOverlay"></div>
 
 <nav>
   <a href="index.html" class="logo">วัดป่าเขาภูหลวง</a>
   <div class="nav-links">
     <a href="index.html">หน้าหลัก</a>
-    <a href="history.html">ประวัติ</a>
+    <a href="history.html" class="active">ประวัติ</a>
     <a href="teachings.html">รวมเทศน์</a>
     <a href="donate.html" class="btn-donate">ร่วมทำบุญ</a>
   </div>
@@ -30,58 +29,88 @@
 
 <div class="page-hero">
   <div class="label">ชีวประวัติและปฏิปทา</div>
-  <h1>ประวัติหลวงปู่ไม</h1>
-  <h1>อินทสิริ</h1>
-  <p>เจ้าอาวาสวัดป่าเขาภูหลวง — ผู้ปฏิบัติดี ปฏิบัติชอบ</p>
+  <h1>หลวงปู่ไม อินทสิริ</h1>
+  <p>พระครูกิตติอุดมญาณ — อดีตประธานสงฆ์วัดป่าเขาภูหลวง</p>
 </div>
 
 <div class="container">
-  
   <aside class="sidebar" id="sidebarMenu">
     <div class="toc-box">
       <div class="toc-header-mobile">
-          <span class="toc-title">เลือกหัวข้อ</span>
-          <button class="close-menu" id="closeMenu">&times;</button>
+        <span class="toc-title">เลือกหัวข้อ</span>
+        <button class="close-menu" id="closeMenu">&times;</button>
       </div>
       <div class="toc-title-desktop">สารบัญ</div>
       <ul class="toc-list">
-        <li><a href="#intro" class="toc-link"><span class="toc-num">01</span>ประวัติเบื้องต้น</a></li>
-        <li><a href="#childhood" class="toc-link"><span class="toc-num">02</span>วัยเด็กและครอบครัว</a></li>
-        <li><a href="#ordination" class="toc-link"><span class="toc-num">03</span>สู่ร่มกาสาวพัสตร์</a></li>
-        <li><a href="#practice" class="toc-link"><span class="toc-num">04</span>การปฏิบัติธรรม</a></li>
-        <li><a href="#mara" class="toc-link"><span class="toc-num">05</span>เอาชนะมาร (ตาทิพย์)</a></li>
-        <li><a href="#teacher" class="toc-link"><span class="toc-num">06</span>ครูบาอาจารย์</a></li>
+        <li><a href="#profile"    class="toc-link"><span class="toc-num">01</span>ข้อมูลสำคัญ</a></li>
+        <li><a href="#intro"      class="toc-link"><span class="toc-num">02</span>ประวัติเบื้องต้น</a></li>
+        <li><a href="#childhood"  class="toc-link"><span class="toc-num">03</span>วัยเด็กและครอบครัว</a></li>
+        <li><a href="#ordination" class="toc-link"><span class="toc-num">04</span>สู่ร่มกาสาวพัสตร์</a></li>
+        <li><a href="#practice"   class="toc-link"><span class="toc-num">05</span>การปฏิบัติธรรม</a></li>
+        <li><a href="#mara"       class="toc-link"><span class="toc-num">06</span>เอาชนะมาร (ตาทิพย์)</a></li>
+        <li><a href="#teacher"    class="toc-link"><span class="toc-num">07</span>ครูบาอาจารย์</a></li>
+        <li><a href="#passing"    class="toc-link"><span class="toc-num">08</span>การละสังขาร</a></li>
+        <li><a href="#dhamma"     class="toc-link"><span class="toc-num">09</span>โอวาทธรรม</a></li>
       </ul>
     </div>
   </aside>
 
-    <section id="intro">
-      <div class="section-label"><span class="section-num">01</span><h2>ประวัติเบื้องต้น</h2></div>
-      <div class="img-block">
-    <img src="หลวงปู่ไม อิน.jpg" alt="รูปถ่ายหลวงปู่ไม อินทสิริ" class="content-img">
-      </div>
-      <p>ผู้เขียนรู้จักท่านพระอาจารย์เมื่อ 5 ปีที่แล้ว สมัยนั้นไม่มีใครรู้จักองค์ท่าน ไม่โด่งดังเหมือนสมัยนี้ มองเผินๆ เหมือนพระธรรมดาเพียงเท่านั้น</p>
-      <p>ที่รู้จักเพราะหลวงปู่บุญมาบอกว่าให้ไปกราบท่านพระอาจารย์ไม เพราะท่านมีคุณวิเศษมาก ครั้งแรกที่ไปกราบท่านดูเหมือนท่านจะดุเป็นพิเศษในเรื่องข้อวัตรปฏิบัติ</p>
-      <div class="quote-block">
-        "ท่านเมตตาเล่าประวัติและภูมิธรรมให้ฟัง ระหว่างที่นวดถวายท่านจนถึงเที่ยงคืน มีสิ่งที่น่าตื่นเต้นหลายเรื่อง"
+  <main class="content">
+
+    <section id="profile">
+      <div class="section-label"><span class="section-num">01</span><h2>ข้อมูลสำคัญ</h2></div>
+
+      <div class="profile-card">
+        <div class="profile-img-wrap">
+
+          <img src="หลวงปู่ไม-อินทสิริ.jpg" alt="หลวงปู่ไม อินทสิริ" class="profile-img">
+        </div>
+        <div class="profile-info">
+          <div class="profile-name">หลวงปู่ไม อินทสิริ</div>
+          <div class="profile-title">พระครูกิตติอุดมญาณ</div>
+          <div class="profile-rows">
+            <div class="profile-row"><span class="pr-label">เกิด</span><span class="pr-value">พ.ศ. ๒๔๙๐ จ.อุดรธานี</span></div>
+            <div class="profile-row"><span class="pr-label">บรรพชา</span><span class="pr-value">๑๑ พฤษภาคม ๒๕๐๙</span></div>
+            <div class="profile-row"><span class="pr-label">อุปสมบท</span><span class="pr-value">พ.ศ. ๒๕๑๑</span></div>
+            <div class="profile-row"><span class="pr-label">ละสังขาร</span><span class="pr-value">๒๗ สิงหาคม ๒๕๖๔</span></div>
+            <div class="profile-row"><span class="pr-label">สิริอายุ</span><span class="pr-value">๗๓ ปี ๗ เดือน ๒ วัน</span></div>
+            <div class="profile-row"><span class="pr-label">พรรษา</span><span class="pr-value">๕๔ พรรษา</span></div>
+            <div class="profile-row"><span class="pr-label">วัด</span><span class="pr-value">วัดป่าเขาภูหลวง ต.ระเริง อ.วังน้ำเขียว จ.นครราชสีมา</span></div>
+            <div class="profile-row"><span class="pr-label">สายธรรม</span><span class="pr-value">กรรมฐาน สายท่านพระอาจารย์มั่น ภูริทัตโต</span></div>
+          </div>
+        </div>
       </div>
     </section>
 
     <hr class="section-divider">
 
+    <section id="intro">
+      <div class="section-label"><span class="section-num">02</span><h2>ประวัติเบื้องต้น</h2></div>
+      <p>ผู้เขียนรู้จักท่านพระอาจารย์เมื่อ 5 ปีที่แล้ว สมัยนั้นไม่มีใครรู้จักองค์ท่าน ไม่โด่งดังเหมือนสมัยนี้ มองเผินๆ เหมือนพระธรรมดาเพียงเท่านั้น</p>
+      <p>ที่รู้จักเพราะหลวงปู่บุญมาบอกว่าให้ไปกราบท่านพระอาจารย์ไม เพราะท่านมีคุณวิเศษมาก ครั้งแรกที่ไปกราบท่านดูเหมือนท่านจะดุเป็นพิเศษในเรื่องข้อวัตรปฏิบัติ</p>
+      <div class="quote-block">"ท่านเมตตาเล่าประวัติและภูมิธรรมให้ฟัง ระหว่างที่นวดถวายท่านจนถึงเที่ยงคืน มีสิ่งที่น่าตื่นเต้นหลายเรื่อง"</div>
+    </section>
+
+    <hr class="section-divider">
+
     <section id="childhood">
-      <div class="section-label"><span class="section-num">02</span><h2>วัยเด็กและครอบครัว</h2></div>
-      <p>ท่านอยากบวชตั้งแต่เรียนอยู่ ป.4 แต่คุณพ่อขอให้ช่วยงานบ้านก่อน ท่านมีพี่น้อง 7 คน (ชาย 6 หญิง 1) ท่านเป็นคนขยัน ทำงานทุกอย่างเพื่อเลี้ยงครอบครัว</p>
-      <div style="margin: 1.5rem 0;">
+      <div class="section-label"><span class="section-num">03</span><h2>วัยเด็กและครอบครัว</h2></div>
+      <p>หลวงปู่ไมเป็นชาวอุดรธานีโดยกำเนิด เกิดเมื่อปี พ.ศ. ๒๔๙๐ มีพี่น้องทั้งหมด ๗ คน (ชาย ๖ หญิง ๑) ท่านอยากบวชตั้งแต่เรียนอยู่ ป.๔ แต่คุณพ่อขอให้ช่วยงานบ้านก่อน ท่านเป็นคนขยัน ทำงานทุกอย่างเพื่อเลี้ยงครอบครัว</p>
+      <div style="margin:1.5rem 0">
         <div class="timeline-item">
           <div class="timeline-dot"></div>
-          <div class="timeline-year">อายุ 13</div>
-          <div class="timeline-text">ทำงานบ้านและเก็บเงินซื้อควายได้ 2 ตัว</div>
+          <div class="timeline-year">อายุ ๑๓</div>
+          <div class="timeline-text">ทำงานบ้านและเก็บเงินซื้อควายได้ ๒ ตัว</div>
         </div>
         <div class="timeline-item">
           <div class="timeline-dot"></div>
-          <div class="timeline-year">อายุ 14</div>
+          <div class="timeline-year">อายุ ๑๔</div>
           <div class="timeline-text">คุณพ่อเสียชีวิต ท่านต้องดูแลน้องๆ และทำงานหนักทั้งปลูกอ้อย ปลูกข้าวโพด</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">อายุ ๑๘</div>
+          <div class="timeline-text">ลุงขอให้บวชเพราะที่วัดขาดพระเณร ท่านตกลงบวชโดยกะว่าจะสึกหลังออกพรรษา</div>
         </div>
       </div>
     </section>
@@ -89,65 +118,126 @@
     <hr class="section-divider">
 
     <section id="ordination">
-      <div class="section-label"><span class="section-num">03</span><h2>สู่ร่มกาสาวพัสตร์</h2></div>
-      <p>เมื่ออายุ 18 ปี ลุงขอให้บวชเพราะที่วัดขาดพระเณร ท่านตกลงบวชโดยกะว่าจะสึกหลังออกพรรษา</p>
-      <div style="display:flex;gap:1rem;margin:1.2rem 0;flex-wrap:wrap;">
-        <div style="flex:1;min-width:160px;background:white;border:1px solid #E9DCC0;border-radius:12px;padding:1rem;text-align:center;">
-          <div style="font-family:'Prompt';font-weight:600;color:#8B5E1A;">11 พ.ค. 2509</div>
-          <div style="font-size:0.8rem;color:#666;">บรรพชาเป็นสามเณร</div>
+      <div class="section-label"><span class="section-num">04</span><h2>สู่ร่มกาสาวพัสตร์</h2></div>
+      <p>เมื่อปี พ.ศ. ๒๕๐๙ ท่านได้บรรพชาเป็นสามเณร จากนั้นปี พ.ศ. ๒๕๑๑ จึงอุปสมบทเป็นพระภิกษุในบวรพระพุทธศาสนา</p>
+      <div class="stat-chips">
+        <div class="chip">
+          <div class="chip-year">๑๑ พ.ค. ๒๕๐๙</div>
+          <div class="chip-label">บรรพชาเป็นสามเณร</div>
         </div>
-        <div style="flex:1;min-width:160px;background:white;border:1px solid #E9DCC0;border-radius:12px;padding:1rem;text-align:center;">
-          <div style="font-family:'Prompt';font-weight:600;color:#3b4d1c;">พ.ศ. 2511</div>
-          <div style="font-size:0.8rem;color:#666;">อุปสมบทเป็นพระภิกษุ</div>
+        <div class="chip">
+          <div class="chip-year">พ.ศ. ๒๕๑๑</div>
+          <div class="chip-label">อุปสมบทเป็นพระภิกษุ</div>
+        </div>
+        <div class="chip">
+          <div class="chip-year">๕๔ พรรษา</div>
+          <div class="chip-label">สิริพรรษา</div>
         </div>
       </div>
-      <p>แต่หลังจากบวชได้เพียง 1 เดือน 20 วัน ท่านได้พบความสงบจากการปฏิบัติ จนลืมความคิดที่จะสึกไปโดยสิ้นเชิง</p>
+      <p>แต่หลังจากบวชได้เพียง ๑ เดือน ๒๐ วัน ท่านได้พบความสงบจากการปฏิบัติ จนลืมความคิดที่จะสึกไปโดยสิ้นเชิง</p>
     </section>
 
     <hr class="section-divider">
 
     <section id="practice">
-      <div class="section-label"><span class="section-num">04</span><h2>การปฏิบัติธรรม</h2></div>
+      <div class="section-label"><span class="section-num">05</span><h2>การปฏิบัติธรรม</h2></div>
+      <p>เมื่ออุปสมบทแล้ว ท่านพระอาจารย์ไม อินทสิริ มีโอกาสได้ศึกษาธรรมกับพ่อแม่ครูอาจารย์สายกรรมฐาน ที่เป็นศิษย์องค์สำคัญของท่านพระอาจารย์มั่น ภูริทัตโต หลายรูป</p>
       <p>ช่วงแรกท่านพบความทุกข์ทรมานมากเมื่อนั่งสมาธิ เจ็บปวดเหน็บชาจนท้อแท้ แต่นึกถึงคำสอนครูบาอาจารย์จึงฮึดสู้ต่อ</p>
-      <div class="quote-block">
-        "นั่งแต่ละวันได้แค่ 20-30 นาทีก็แพ้ขาตัวเองอยู่อย่างนั้นเป็นเดือนๆ"
-      </div>
-      <p>ท่านเริ่มกิจวัตรเข้มงวด ตักน้ำ ทำวัตรเย็น เดินจงกรม 2 ทุ่ม และนั่งสมาธิต่อจนดึกทุกวัน</p>
+      <div class="quote-block">"นั่งแต่ละวันได้แค่ ๒๐-๓๐ นาทีก็แพ้ขาตัวเองอยู่อย่างนั้นเป็นเดือนๆ"</div>
+      <p>ท่านเริ่มกิจวัตรเข้มงวด ตักน้ำ ทำวัตรเย็น เดินจงกรม ๒ ทุ่ม และนั่งสมาธิต่อจนดึกทุกวัน บั้นปลายชีวิตท่านได้มาสร้างวัดป่าเขาภูหลวง ตั้งอยู่ที่ ต.ระเริง อ.วังน้ำเขียว จ.นครราชสีมา และพำนักจำพรรษาอยู่ที่วัดแห่งนี้เรื่อยมาจนกระทั่งถึงกาลละสังขาร</p>
     </section>
 
     <hr class="section-divider">
-
     <section id="mara">
-      <div class="section-label"><span class="section-num">05</span><h2>เอาชนะมาร (ตาทิพย์)</h2></div>
+      <div class="section-label"><span class="section-num">06</span><h2>เอาชนะมาร (ตาทิพย์)</h2></div>
       <p>คืนหนึ่งท่านตั้งสัจจะอธิษฐาน "คืนนี้กูจะสู้ให้มันตาย ถ้าไม่เห็นธรรมจะไม่ลุก" ท่านนั่งต่อสู้กับเวทนาจนถึงเที่ยงคืน</p>
       <p>ทันใดนั้นจิตดิ่งลงสู่ความสงบ เกิดแสงสว่างสว่างไสวเหมือนดวงจันทร์ ท่านสามารถมองเห็นทุกอย่างในวัดได้แม้หลับตา นั่นคือจุดเริ่มต้นของ "ตาทิพย์" ที่เลื่องลือ</p>
+      <div class="quote-block">"จิตดิ่งลงสู่ความสงบ เกิดแสงสว่างสว่างไสว มองเห็นทุกอย่างในวัดได้แม้หลับตา"</div>
     </section>
 
     <hr class="section-divider">
 
+    <!-- ── 07 TEACHER ── -->
     <section id="teacher">
-      <div class="section-label"><span class="section-num">06</span><h2>ครูบาอาจารย์</h2></div>
-      <div style="display:grid;gap:10px;margin-top:1rem;">
-        <div style="background:white;border:1px solid #E9DCC0;border-radius:10px;padding:1rem;display:flex;align-items:center;gap:15px;">
-          <div style="width:10px;height:10px;background:#8B5E1A;border-radius:50%;"></div>
-          <p><strong>หลวงปู่ศรี</strong> — ผู้สอนตาทิพย์และจุดประกายการปฏิบัติธรรม</p>
+      <div class="section-label"><span class="section-num">07</span><h2>ครูบาอาจารย์</h2></div>
+      <p>หลวงปู่ไมได้ศึกษาธรรมกับพ่อแม่ครูอาจารย์สายกรรมฐาน ซึ่งเป็นศิษย์สำคัญของท่านพระอาจารย์มั่น ภูริทัตโต อันได้แก่</p>
+      <div style="margin-top:1rem">
+        <div class="teacher-card">
+          <div class="teacher-dot" style="background:#8B5E1A"></div>
+          <div>
+            <strong>หลวงปู่ศรี อุจจโย</strong>
+            <div style="font-size:.85rem;color:var(--text-muted);margin-top:2px">ผู้สอนตาทิพย์และจุดประกายการปฏิบัติธรรม</div>
+          </div>
         </div>
-        <div style="background:white;border:1px solid #E9DCC0;border-radius:10px;padding:1rem;display:flex;align-items:center;gap:15px;">
-          <div style="width:10px;height:10px;background:#3b4d1c;border-radius:50%;"></div>
-          <p><strong>หลวงปู่บุญมา</strong> — ผู้เมตตาแนะนำลูกศิษย์ให้มาพบท่าน</p>
+        <div class="teacher-card">
+          <div class="teacher-dot" style="background:#3b4d1c"></div>
+          <div>
+            <strong>หลวงปู่อ่อน ญาณสิริ</strong>
+            <div style="font-size:.85rem;color:var(--text-muted);margin-top:2px">ครูบาอาจารย์สายกรรมฐาน ศิษย์สำคัญของพระอาจารย์มั่น</div>
+          </div>
+        </div>
+        <div class="teacher-card">
+          <div class="teacher-dot" style="background:#C49A3C"></div>
+          <div>
+            <strong>ท่านพระอาจารย์มั่น ภูริทัตโต</strong>
+            <div style="font-size:.85rem;color:var(--text-muted);margin-top:2px">พระอาจารย์ใหญ่สายกรรมฐาน ต้นสายสำคัญของธรรมยุต</div>
+          </div>
         </div>
       </div>
     </section>
 
-    <div style="text-align:center;padding:3rem 0 1rem;">
-      <a href="index.html" style="background:#3b4d1c;color:white;text-decoration:none;padding:12px 30px;border-radius:50px;font-family:'Prompt';">← กลับหน้าหลัก</a>
+    <hr class="section-divider">
+
+    <section id="passing">
+      <div class="section-label"><span class="section-num">08</span><h2>การละสังขาร</h2></div>
+
+      <div class="passing-card">
+        <div class="passing-icon">🕯️</div>
+        <div class="passing-info">
+          <div class="passing-title">น้อมรำลึกถึงคุณท่าน</div>
+          <div class="passing-detail">หลวงปู่ไม อินทสิริ ละสังขารแล้วด้วยอาการสงบ<br>ณ โรงพยาบาลรามาธิบดี กรุงเทพมหานคร</div>
+          <div class="passing-stats">
+            <div class="p-stat"><div class="p-stat-val">๒๗ ส.ค. ๒๕๖๔</div><div class="p-stat-label">วันละสังขาร</div></div>
+            <div class="p-stat"><div class="p-stat-val">เวลา ๐๑.๑๒ น.</div><div class="p-stat-label">เวลาละสังขาร</div></div>
+            <div class="p-stat"><div class="p-stat-val">๗๓ ปี</div><div class="p-stat-label">สิริอายุ</div></div>
+            <div class="p-stat"><div class="p-stat-val">๕๔ พรรษา</div><div class="p-stat-label">สิริพรรษา</div></div>
+          </div>
+        </div>
+      </div>
+
+      <p style="margin-top:1.2rem">ทางวัดป่าเขาภูหลวงได้ประกาศ (คำสั่ง ๐๑/๒๕๖๔) โดยพระครูใบฎีกา อมร อุทโย เจ้าอาวาสวัดป่าเขาภูหลวง เรื่องการบำเพ็ญสรีรสังขาร โดยงดรับบุคคลภายนอกเนื่องจากสถานการณ์โควิด-๑๙</p>
+    </section>
+
+    <hr class="section-divider">
+
+    <section id="dhamma">
+      <div class="section-label"><span class="section-num">09</span><h2>โอวาทธรรม</h2></div>
+      <div class="dhamma-grid">
+        <div class="dhamma-card">
+          <div class="dhamma-icon">☸️</div>
+          <p>"ในโลกนี้หรือโลกหน้า การได้พบได้เจอกัน หรือจะเป็นพลัดพรากจากกัน ไม่ใช่สิ่งบังเอิญ ทุกอย่างมีเหตุมีปัจจัย"</p>
+        </div>
+        <div class="dhamma-card">
+          <div class="dhamma-icon">🌿</div>
+          <p>"กิเลสไปที่ไหนจะมีรอยร้าวไปเรื่อยๆ กิเลสมีรอยร้าวคอยเผา คอยจุด คอยยุแหย่ก่อกวนไปเรื่อย ถ้าเรื่องของธรรมมีเหตุมีผลทุกอย่าง"</p>
+        </div>
+        <div class="dhamma-card">
+          <div class="dhamma-icon">🪔</div>
+          <p>"กายเราก็เปื้อนได้ ใจเราก็เปื้อนได้ กายเปื้อน เราล้างออก แต่ใจเปื้อนนั้น ต้องใช้ธรรมะล้าง"</p>
+        </div>
+      </div>
+    </section>
+
+    <div style="text-align:center;padding:2.5rem 0 1rem">
+      <a href="index.html" class="back-home-btn">← กลับหน้าหลัก</a>
     </div>
+
   </main>
 </div>
 
 <footer>
   <p>© 2026 วัดป่าเขาภูหลวง. All Rights Reserved.</p>
-  <p class="brand">Designed & Developed by GUS CREATIVE</p>
+  <p class="brand">Designed &amp; Developed by GUS </p>
 </footer>
 
 <script src="history.js"></script>
