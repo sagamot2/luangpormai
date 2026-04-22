@@ -4,49 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ข่าวสารประชาสัมพันธ์ - วัดป่าเขาภูหลวง</title>
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Thai:wght@300;400;500;600;700&family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="news.css">
 </head>
 <body>
 
     <nav>
-        <div class="logo">วัดป่าเขาภูหลวง</div>
-        <div class="nav-links">
+        <a href="index.html" class="logo">วัดป่าเขาภูหลวง</a>
+        
+        <button class="hamburger" id="hamburgerNav" aria-label="เมนูหลัก">
+            <span></span><span></span><span></span>
+        </button>
+
+        <div class="nav-links" id="mainNavLinks">
             <a href="index.html">หน้าหลัก</a>
             <a href="history.html">ประวัติ</a>
             <a href="teachings.html">รวมเทศน์</a>
-            <a href="donate.html" class="btn-donate">ร่วมทำบุญ</a>
+            <a href="news.html" class="active-link">ข่าวสาร</a>
+            <a href="donate.html" class="btn-donate-nav">ร่วมทำบุญ</a>
         </div>
     </nav>
 
-    <main class="news-detail-page">
-        <article class="news-article">
-            <header class="article-header">
-                <span class="category-tag">ข่าวงานบุญ</span>
-                <h1>ขอเชิญร่วมทำบุญ</h1>
+    <main class="news-main">
+        <article class="news-card">
+            
+            <header class="news-header">
+                <span class="news-tag">ข่าวงานบุญ</span>
+                <h1 class="news-title">ขอเชิญร่วมทำบุญ</h1>
+                <p class="news-meta">อัปเดตล่าสุดเมื่อเร็วๆ นี้</p>
             </header>
 
-            <div class="featured-image">
-                <img src="https://scontent.fcnx4-2.fna.fbcdn.net/v/t39.30808-6/607729722_1444900883658169_7018249684999594893_n.jpg?stp=dst-jpg_p180x540_tt6&_nc_cat=103&ccb=1-7&_nc_sid=7b2446&_nc_ohc=pHXjth-pES8Q7kNvwEYlNnf&_nc_oc=AdrImi29xg1N14CX9YVk2hM9C0DXdQIQxxqauOU_gmwTGZzXNfAE4c8pGLjtDA8mejsv-offL1z4Xx6iYmnbuYWB&_nc_zt=23&_nc_ht=scontent.fcnx4-2.fna&_nc_gid=0PK72PY1iPe9sypFPCoD2w&_nc_ss=7a3a8&oh=00_Af0-RUZEjgrEa7ySj6g_WaRwIYqdu-9h5jKobUZCbEOVKg&oe=69DD6364" alt="ประกาศงานบุญ">
+            <div class="news-image">
+                <img src="ทำบุญ.jpg" alt="ประกาศงานบุญ วัดป่าเขาภูหลวง">
             </div>
 
-            <div class="article-body">
-                <div class="content-box">
-                    <p>มีผู้มีจิตศรัทธา แจ้งความประสงค์เป็นเจ้าภาพหินส่วนเอวขันธ์แล้ว 12 ท่าน คือ หินเอวขันธ์ ขนาดใหญ่ แจ้งความประสงค์ มา 7 ท่าน ขนาดกลาง 1 ท่าน ขนาดเล็ก 4 ท่าน ยังเหลืออีก 49 ก้อน ขนาดใหญ่ เหลือ 32 ก้อน กลาง 5 ก้อน เล็ก 10 ก้อน</p>
+            <div class="news-body">
+                <div class="news-content">
+                    <p>มีผู้มีจิตศรัทธา แจ้งความประสงค์เป็นเจ้าภาพหินส่วนเอวขันธ์แล้ว 12 ท่าน คือ หินเอวขันธ์ ขนาดใหญ่ แจ้งความประสงค์ มา 7 ท่าน ขนาดกลาง 1 ท่าน ขนาดเล็ก 4 ท่าน</p>
+                    <p>ขณะนี้ <b>ยังเหลืออีก 49 ก้อน</b> แบ่งเป็น ขนาดใหญ่ 32 ก้อน, ขนาดกลาง 5 ก้อน, และขนาดเล็ก 10 ก้อน จึงขอเรียนเชิญพุทธศาสนิกชนผู้มีจิตศรัทธาทุกท่าน ร่วมสร้างบุญใหญ่ในครั้งนี้ตามกำลังศรัทธา</p>
                 </div>
                 
-                <div class="action-area">
+                <div class="news-action">
                     <a href="index.html" class="btn-back">← ย้อนกลับหน้าแรก</a>
+                    <a href="donate.html" class="btn-primary">ร่วมทำบุญตอนนี้</a>
                 </div>
             </div>
+
         </article>
     </main>
 
     <footer>
-        <p>&copy; 2026 วัดป่าเขาภูหลวง. All Rights Reserved.</p>
-        <div class="brand-credit">Designed & Developed by GUS CREATIVE</div>
+        <div class="footer-in">
+            <div class="footer-logo">วัดป่าเขาภูหลวง</div>
+            <p>© 2026 วัดป่าเขาภูหลวง. All Rights Reserved.</p>
+            <div class="footer-credit">Designed & Developed by GUS CREATIVE</div>
+        </div>
     </footer>
 
+    <script src="news.js"></script>
 </body>
 </html>
