@@ -1,372 +1,71 @@
-:root {
-    --primary-color: #3b4d1c;
-    --secondary-color: #E9DCC0; 
-    --bg-color: #FAFAF5; 
-    --text-dark: #2C3E50;
-    --text-light: #FFFFFF;
-}
-
-* { 
-    margin: 0; 
-    padding: 0; 
-    box-sizing: border-box; 
-    font-family: 'Prompt', sans-serif; 
-}
-
-body { 
-    background-color: var(--bg-color); 
-    color: var(--text-dark); 
-    line-height: 1.6; 
-}
-
-nav { 
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
-    padding: 1rem 5%; 
-    background-color: rgba(250, 250, 245, 0.98); 
-    position: sticky; 
-    top: 0; 
-    z-index: 100; 
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
-}
-
-.logo { 
-    font-size: 1.6rem; 
-    font-weight: 600; 
-    color: var(--primary-color); 
-}
-
-.nav-links {
-    display: flex;
-    align-items: center;
-}
-
-.nav-links a { 
-    margin-left: 25px; 
-    text-decoration: none; 
-    color: var(--text-dark); 
-    transition: color 0.3s; 
-    font-weight: 400;
-}
-
-.nav-links a:hover { 
-    color: var(--primary-color); 
-}
-
-.btn-donate { 
-    background-color: #D35400; 
-    color: white !important; 
-    padding: 10px 22px; 
-    border-radius: 25px; 
-    font-weight: 500; 
-    transition: all 0.3s;
-    box-shadow: 0 4px 10px rgba(211, 84, 0, 0.3);
-}
-
-.btn-donate:hover {
-    background-color: #E67E22;
-    transform: translateY(-2px);
-}
-
-.hero { 
-    min-height: 75vh; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 0 20px;
-    color: var(--text-light);
-   background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
-                url('หลวงปู่ไม อิน.jpg') 
-                center/cover no-repeat;
-}
-
-.hero h1 { 
-    font-size: 3.8rem; 
-    margin-bottom: 5px; 
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.8); 
-}
-
-.hero p { 
-    font-size: 1.5rem; 
-    font-weight: 300; 
-    text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
-}
-
-.dhamma-quote { 
-    background-color: var(--secondary-color); 
-    padding: 4rem 10%; 
-    text-align: center; 
-    color: var(--text-dark); 
-    border-bottom: 4px solid var(--primary-color);
-}
-
-.dhamma-quote p { 
-    font-size: 1.8rem; 
-    font-style: italic; 
-    font-weight: 500; 
-    color: var(--primary-color);
-}
-
-.info-section { 
-    padding: 5rem 10%; 
-    text-align: center; 
-}
-
-.info-section h2 { 
-    margin-bottom: 3.5rem; 
-    color: var(--primary-color); 
-    font-size: 2.2rem; 
-}
-
-.cards { 
-    display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-    gap: 2.5rem; 
-}
-
-.card { 
-    background: white; 
-    padding: 3rem 2rem; 
-    border-radius: 15px; 
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08); 
-    transition: transform 0.3s, box-shadow 0.3s; 
-}
-
-.card:hover { 
-    transform: translateY(-10px); 
-    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
-}
-
-.card h3 { 
-    color: var(--primary-color); 
-    margin-bottom: 1.2rem; 
-    font-size: 1.4rem;
-}
-
-.card a { 
-    display: inline-block; 
-    margin-top: 1.5rem; 
-    text-decoration: none; 
-    color: var(--primary-color); 
-    font-weight: 600; 
-    position: relative;
-}
-
-.card a::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background-color: var(--primary-color);
-    bottom: -4px;
-    left: 0;
-    transition: width 0.3s;
-}
-
-.card a:hover::after {
-    width: 50%;
-}
-
-.page-header {
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-                url('https://scontent.fcnx4-2.fna.fbcdn.net/v/t39.30808-6/471195833_1159694345512159_1511739356763089182_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=2a1932&_nc_ohc=rIkBIbr9P20Q7kNvwF-YS5R&_nc_oc=AdqcYTpGYsGMO0iuJV0rfl1IAyuDRtKTvavtR8X2VfYIF-puEJbiBrlplp94xKaIySbFQOxl0DuNsHIF4S7m2ZBV&_nc_zt=23&_nc_ht=scontent.fcnx4-2.fna&_nc_gid=cugwUnq4CBZCeFwXaMp7Hw&_nc_ss=7a3a8&oh=00_Af2isCaeFviKA_BOfjp_LzmVVNdBkNElm8Gs-_6reE5Hdg&oe=69DC160B') 
-                center/cover no-repeat;
-    color: var(--text-light);
-    text-align: center;
-    padding: 100px 20px 60px;
-}
-
-.page-header h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-    color: var(--secondary-color);
-}
-
-.donation-section {
-    padding: 5rem 10%;
-    background-color: var(--bg-color);
-}
-
-.donation-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    justify-content: center;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.donation-card {
-    background: white;
-    padding: 3rem 2rem;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-    flex: 1;
-    min-width: 300px;
-    text-align: center;
-    border-top: 6px solid var(--primary-color);
-}
-
-.donation-card h3 {
-    color: var(--primary-color);
-    margin-bottom: 1.5rem;
-    font-size: 1.5rem;
-}
-
-.bank-details {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    margin-top: 20px;
-}
-
-.bank-name {
-    color: #117a65;
-    font-size: 1.4rem;
-    margin-bottom: 5px;
-}
-
-.account-name {
-    font-size: 1.1rem;
-}
-
-.account-number {
-    display: inline-flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    background: #f8f9fa;
-    padding: 15px 25px;
-    border-radius: 50px;
-    margin-top: 15px;
-    border: 1px solid #e0e0e0;
-}
-
-.account-number span {
-    font-size: 1.5rem;
-    font-weight: 600;
-    letter-spacing: 2px;
-    color: var(--text-dark);
-}
-
-.btn-copy {
-    background: var(--primary-color);
-    color: white;
-    border: none;
-    padding: 8px 15px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-weight: 500;
-    transition: background 0.3s;
-}
-
-.btn-copy:hover {
-    background: #2a3814;
-}
-
-.contact-details {
-    text-align: left;
-    margin-top: 20px;
-    line-height: 2;
-    display: inline-block;
-    font-size: 1.1rem;
-}
-
-.phone-link {
-    color: var(--primary-color);
-    text-decoration: none;
-    font-weight: 500;
-}
-
-.fb-link {
-    color: #1877F2;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-.back-btn-container {
-    margin-top: 40px;
-}
-
-.btn-back {
-    background: var(--text-dark);
-    color: white;
-    padding: 10px 25px;
-    border-radius: 25px;
-    text-decoration: none;
-    display: inline-block;
-    font-weight: 500;
-    transition: background 0.3s;
-}
-
-.btn-back:hover {
-    background: #1a252f;
-}
-
-footer { 
-    background-color: var(--text-dark); 
-    color: var(--text-light); 
-    text-align: center; 
-    padding: 3rem 0; 
-}
-
-footer p { 
-    font-size: 1rem; 
-    opacity: 0.8; 
-    margin-bottom: 10px;
-}
-
-.brand-credit {
-    font-size: 0.85rem;
-    color: #D4C4A8;
-    letter-spacing: 2px;
-}
-
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        padding: 1rem;
-        gap: 1rem;
-    }
-    
-    .nav-links {
-        flex-wrap: wrap; 
-        justify-content: center;
-        gap: 15px;
-    }
-    
-    .nav-links a {
-        margin-left: 0;
-        font-size: 1rem;
-    }
-
-    .hero {
-        min-height: 60vh;
-        padding: 2rem 20px;
-    }
-
-    .hero h1 {
-        font-size: 2.5rem; 
-    }
-
-    .dhamma-quote {
-        padding: 3rem 5%;
-    }
-
-    .info-section {
-        padding: 4rem 5%;
-    }
-    
-    .page-header {
-        padding: 80px 20px 40px;
-    }
-    
-    .page-header h1 {
-        font-size: 2.2rem;
-    }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Thai:wght@300;400;500;600;700&family=Prompt:wght@300;400;500;600&display=swap');
+:root{--gold:#B8860B;--gold2:#D4A017;--gold3:#F0C040;--brown:#3A1F08;--green:#2d3b15;--kbank:#00A950;--cream:#F9F6F0;--cream-dark:#E9DCC0;--bg:#FAFAF5;--text:#2C3E50;--muted:#7a8471;--orange:#D35400;--shadow:0 8px 32px rgba(58,31,8,0.06);--shadow2:0 15px 40px rgba(0,0,0,0.08)}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Prompt',sans-serif;line-height:1.7}
+nav{display:flex;justify-content:space-between;align-items:center;padding:0 6%;height:70px;background:rgba(255,255,255,0.98);position:sticky;top:0;z-index:1000;box-shadow:0 4px 20px rgba(0,0,0,0.05)}
+.logo{font-family:'Noto Serif Thai',serif;font-size:1.3rem;font-weight:700;color:var(--green);text-decoration:none}
+.nav-links{display:flex;align-items:center;gap:6px}
+.nav-links a{text-decoration:none;color:var(--text);font-size:0.95rem;padding:8px 16px;border-radius:50px;transition:all 0.2s}
+.nav-links a:hover{background:var(--cream);color:var(--green)}
+.btn-donate-nav{background:var(--orange)!important;color:white!important;font-weight:500!important;box-shadow:0 4px 12px rgba(211,84,0,0.25);margin-left:8px}
+.btn-donate-nav:hover{background:#B34A00!important;transform:translateY(-2px);box-shadow:0 6px 15px rgba(211,84,0,0.35)}
+.page-hero{min-height:40vh;background:linear-gradient(160deg,#1e0e04 0%,#3A1F08 50%,#1a2a0a 100%);display:flex;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden;padding:4rem 2rem}
+.lotus-bg{position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23B8860B' fill-opacity='0.05'%3E%3Cpath d='M40 0C18 0 0 18 0 40s18 40 40 40 40-18 40-40S62 0 40 0zm0 72C22 72 8 58 8 40S22 8 40 8s32 14 32 32-14 32-32 32z'/%3E%3C/g%3E%3C/svg%3E");opacity:0.8}
+.hero-inner{position:relative;z-index:1;animation:fadeUp 0.8s ease both}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+.hero-tag{display:inline-block;border:1px solid rgba(212,160,23,0.4);color:var(--gold3);font-size:0.75rem;letter-spacing:3px;padding:6px 18px;border-radius:50px;margin-bottom:1.2rem}
+.page-hero h1{font-family:'Noto Serif Thai',serif;font-size:clamp(2.5rem,5vw,3.8rem);color:#fff;line-height:1.1;margin-bottom:5px}
+.hero-sub{font-family:'Noto Serif Thai',serif;font-size:clamp(1.2rem,2.5vw,1.8rem);color:var(--gold2);margin-bottom:1rem}
+.page-hero p{color:rgba(255,255,255,0.7);font-size:1.05rem}
+.donate-main{max-width:800px;margin:-3rem auto 0;padding:0 5% 5rem;display:flex;flex-direction:column;gap:4rem;position:relative;z-index:10}
+.section-head{display:flex;align-items:flex-start;gap:16px;margin-bottom:2rem}
+.sec-num{background:var(--gold);color:#fff;font-weight:700;font-size:0.8rem;padding:4px 12px;border-radius:8px;margin-top:4px}
+.sec-title{font-family:'Noto Serif Thai',serif;font-size:1.6rem;color:var(--green);margin-bottom:4px;font-weight:600}
+.sec-desc{color:var(--muted);font-size:0.95rem}
+.simple-donate-card{background:#fff;border-radius:24px;box-shadow:var(--shadow2);border:1px solid var(--cream-dark);padding:3rem 2rem;text-align:center;display:flex;flex-direction:column;align-items:center;gap:12px;animation:fadeUp 0.6s ease}
+.bank-icon-large{background:var(--kbank);color:white;width:60px;height:60px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:2rem;font-weight:700;box-shadow:0 6px 15px rgba(0,169,80,0.25);margin-bottom:8px}
+.bank-name{color:var(--kbank);font-size:1.4rem;font-weight:600}
+.acc-name{color:var(--text);font-size:1.05rem}
+.acc-box{background:#f0fdf4;border:1px solid #bbf7d0;border-radius:16px;padding:20px 30px;display:flex;flex-direction:column;align-items:center;gap:15px;margin-top:15px;width:100%;max-width:400px}
+.acc-number{font-size:1.8rem;font-weight:700;color:var(--text);letter-spacing:2px}
+.btn-copy-main{background:var(--kbank);color:#fff;border:none;padding:12px 24px;border-radius:50px;font-family:'Prompt',sans-serif;font-size:1rem;font-weight:500;cursor:pointer;display:flex;align-items:center;gap:8px;transition:0.2s;box-shadow:0 4px 12px rgba(0,169,80,0.2)}
+.btn-copy-main:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,169,80,0.3);background:#008a41}
+.promptpay-box{margin-top:20px;padding-top:20px;border-top:1px dashed var(--cream-dark);display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:0.95rem}
+.promptpay-box b{color:var(--text)}
+.btn-copy-small{background:#fff;border:1px solid var(--cream-dark);color:var(--muted);padding:4px 12px;border-radius:50px;font-family:'Prompt',sans-serif;font-size:0.8rem;cursor:pointer;transition:0.2s}
+.btn-copy-small:hover{background:var(--cream-dark);color:var(--text)}
+.contact-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-bottom:2rem}
+.contact-pill{display:flex;align-items:center;gap:16px;padding:18px 20px;background:#fff;border:1px solid var(--cream-dark);border-radius:16px;text-decoration:none;color:var(--text);transition:all 0.2s;box-shadow:0 4px 15px rgba(0,0,0,0.03)}
+.contact-pill:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--gold)}
+.contact-pill.no-link:hover{transform:none;box-shadow:0 4px 15px rgba(0,0,0,0.03);border-color:var(--cream-dark);cursor:default}
+.c-icon{font-size:1.8rem;flex-shrink:0;display:flex;align-items:center;justify-content:center;width:45px;height:45px;border-radius:12px;background:var(--bg)}
+.contact-pill small{display:block;font-size:0.8rem;color:var(--muted);margin-bottom:2px}
+.contact-pill b{font-size:1rem;font-weight:600;color:var(--text)}
+.map-container{position:relative}
+.map-btn-wrapper{text-align:center;margin-top:20px}
+.btn-maps{display:inline-block;background:#4285F4;color:#fff;text-decoration:none;padding:12px 28px;border-radius:50px;font-size:1rem;font-weight:500;transition:all 0.2s;box-shadow:0 6px 15px rgba(66,133,244,0.3)}
+.btn-maps:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(66,133,244,0.4);background:#2b6bd8}
+footer{background:var(--brown);color:rgba(255,255,255,0.8);padding:3rem 0;text-align:center;margin-top:2rem}
+.footer-logo{font-family:'Noto Serif Thai',serif;font-size:1.4rem;color:var(--gold2);font-weight:600;margin-bottom:8px}
+.footer-credit{font-size:0.75rem;color:var(--gold);letter-spacing:3px;margin-top:10px}
+.toast{position:fixed;bottom:25px;left:50%;transform:translateX(-50%) translateY(100px);background:rgba(34,48,38,0.95);color:#fff;padding:12px 28px;border-radius:50px;font-size:0.95rem;white-space:nowrap;transition:0.4s cubic-bezier(0.68,-0.55,0.265,1.55);z-index:9999;box-shadow:0 6px 16px rgba(0,0,0,0.2);pointer-events:none}
+.toast.show{transform:translateX(-50%) translateY(0)}
+.hamburger{display:none;flex-direction:column;justify-content:space-between;width:28px;height:20px;background:transparent;border:none;cursor:pointer;z-index:1001}
+.hamburger span{width:100%;height:2.5px;background-color:var(--green);border-radius:10px;transition:all 0.3s ease}
+.hamburger.active span:nth-child(1){transform:translateY(8.5px) rotate(45deg)}
+.hamburger.active span:nth-child(2){opacity:0}
+.hamburger.active span:nth-child(3){transform:translateY(-8.5px) rotate(-45deg)}
+@media (max-width:768px){
+nav{padding:0 5%;flex-wrap:wrap}
+.hamburger{display:flex}
+.nav-links{display:none;flex-direction:column;width:100%;background:#ffffff;padding:0;border-top:none;box-shadow:0 15px 30px rgba(0,0,0,0.05);margin-top:10px;border-bottom:3px solid var(--green)}
+.nav-links.active{display:flex;padding:0 0 1.5rem 0}
+.nav-links a{width:100%;text-align:center;padding:14px 0;font-size:1.05rem;margin:0;border-radius:0}
+.nav-links a:hover,.nav-links a.active-link{background:#EFE4CC;color:var(--green);font-weight:500}
+.btn-donate-nav{background:var(--orange)!important;color:white!important;width:85%!important;max-width:320px;display:block!important;padding:12px 0!important;margin:15px auto 0 auto!important;border-radius:50px!important}
+.donate-main{padding:0 5% 4rem;margin-top:-2rem;gap:3rem}
+.simple-donate-card{padding:2rem 1.5rem}
+.acc-number{font-size:1.5rem}
+.contact-row{grid-template-columns:1fr}
 }
