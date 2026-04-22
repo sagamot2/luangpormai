@@ -1,40 +1,56 @@
+document.addEventListener('DOMContentLoaded',()=>{
 let tTimer;
-function showToast(msg){
+window.showToast=function(msg){
 const t=document.getElementById('toast');
+if(!t)return;
 t.textContent=msg;
-t.classList.add('active');
+t.classList.add('active','show');
 clearTimeout(tTimer);
-tTimer=setTimeout(()=>t.classList.remove('active'),2500);
-}
-function copyText(val,msg){
+tTimer=setTimeout(()=>t.classList.remove('active','show'),2500);
+};
+window.copyText=window.copyData=function(val,msg){
 navigator.clipboard.writeText(val).then(()=>{
-showToast(msg);
+showToast(msg||'คัดลอกเรียบร้อย');
 if(navigator.vibrate)navigator.vibrate(40);
 });
+};
+const amtInput=document.getElementById('amtInput')||document.getElementById('amount');
+const presetBtns=document.querySelectorAll('.preset-btn, .p-btn');
+presetBtns.forEach(btn=>{
+btn.addEventListener('click',function(){
+const val=this.textContent.replace(/[^0-9]/g,'');
+if(amtInput)amtInput.value=val;
+presetBtns.forEach(b=>b.classList.remove('active'));
+this.classList.add('active');
+});
+});
+if(amtInput){
+amtInput.addEventListener('input',()=>{
+presetBtns.forEach(b=>b.classList.remove('active'));
+});
 }
-function quickAmt(val,btn){
-document.getElementById('amtInput').value=val;
-resetBtns();
-btn.classList.add('active');
-}
-function resetBtns(){
-document.querySelectorAll('.p-btn').forEach(b=>b.classList.remove('active'));
-}
-function generateQR(){
-const val=document.getElementById('amtInput').value;
-const area=document.getElementById('qrArea');
-const img=document.getElementById('qrImg');
-const lbl=document.getElementById('qrLabel');
+window.generateQR=window.createQR=function(){
+const val=amtInput?amtInput.value:0;
+const area=document.getElementById('qrArea')||document.getElementById('qrResult');
+const img=document.getElementById('qrImg')||document.getElementById('qrImage');
+const lbl=document.getElementById('qrLabel')||document.querySelector('.qr-label');
 if(!val||val<=0){
-showToast('ใส่ยอดเงินด้วยนะครับ');
+showToast('ระบุยอดเงินก่อนนะครับ 🙏');
 return;
 }
-area.classList.remove('show');
+if(area){
+area.classList.remove('show','active');
 void area.offsetWidth;
+}
+if(img){
 img.src=`https://promptpay.io/0801138627/${val}.png`;
-lbl.textContent=`ยอดโอน: ฿${Number(val).toLocaleString()}`;
 img.onload=()=>{
-area.classList.add('show');
-showToast('สร้าง QR เรียบร้อย');
+if(area)area.classList.add('show','active');
+showToast('สร้าง QR สำเร็จ!');
 };
 }
+if(lbl){
+lbl.textContent=`ยอดโอน: ฿${Number(val).toLocaleString('th-TH')}`;
+}
+};
+});
