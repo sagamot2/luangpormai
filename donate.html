@@ -1,86 +1,117 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ร่วมทำบุญและติดต่อ - วัดป่าเขาภูหลวง</title>
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="donate.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ร่วมทำบุญ — วัดป่าเขาภูหลวง</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Thai:wght@300;400;500;600;700&family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="donate.css">
 </head>
 <body>
 
-    <nav>
-        <div class="logo">วัดป่าเขาภูหลวง</div>
-        <div class="nav-links">
-            <a href="index.html">หน้าหลัก</a>
-            <a href="history.html">ประวัติ</a>
-            <a href="donate.html" class="btn-donate">ร่วมทำบุญ</a>
-        </div>
-    </nav>
+<nav>
+  <a href="index.html" class="logo">วัดป่าเขาภูหลวง</a>
+  
+  <button class="hamburger" id="hamburgerNav" aria-label="เมนูหลัก">
+    <span></span><span></span><span></span>
+  </button>
 
-    <header class="page-header">
-        <h1>ร่วมทำบุญและติดต่อวัด</h1>
-        <p>ขอบคุณสำหรับความสนใจในการร่วมทำบุญกับวัดป่าเขาภูหลวง (หลวงปู่ไม อินทสิริ)</p>
-    </header>
+  <div class="nav-links" id="mainNavLinks">
+    <a href="index.html">หน้าหลัก</a>
+    <a href="history.html">ประวัติ</a>
+    <a href="teachings.html">รวมเทศน์</a>
+    <a href="news.html">ข่าวสาร</a>
+    <a href="donate.html" class="btn-donate-nav active-link">ร่วมทำบุญ</a>
+  </div>
+</nav>
 
-    <section class="donation-section">
-        <div class="donation-container">
-            
-            <div class="donation-card">
-                <h3>🏦 โอนผ่านบัญชีธนาคาร</h3>
-                <div class="bank-details">
-                    <h4 style="color: #117a65; font-size: 1.4rem; margin-bottom: 5px;">ธนาคารกสิกรไทย</h4>
-                    <p style="font-size: 1.1rem;">ชื่อบัญชี: <strong>วัดป่าเขาภูหลวง</strong></p>
-                    
-                    <div class="account-number">
-                        <span id="accNum">106-3-53122-3</span>
-                        <button onclick="copyAccount()" class="btn-copy">คัดลอกเลขบัญชี</button>
-                    </div>
-                </div>
-            </div>
+<header class="page-hero">
+  <div class="lotus-bg"></div>
+  <div class="hero-inner">
+    <div class="hero-tag">บุญกุศล · ทำบุญออนไลน์</div>
+    <h1>ร่วมทำบุญ</h1>
+    <h2 class="hero-sub">วัดป่าเขาภูหลวง</h2>
+    <p>ทุกบาทที่บริจาค คือก้าวหนึ่งบนเส้นทางแห่งบุญ</p>
+  </div>
+</header>
 
-            <div class="donation-card contact-map-wrapper">
-                <h3>📞 ช่องทางการติดต่อและการเดินทาง</h3>
-                
-                <div style="text-align: left; margin-top: 15px; line-height: 2; font-size: 1.1rem;">
-                    <p>
-                        <strong>เบอร์โทรศัพท์ (พระอมร) :</strong> 
-                        <a href="tel:0989583689" style="color: var(--primary-color); text-decoration: none; font-weight: 500;">098-958-3689</a>
-                    </p>
-                    <p>
-                        <strong>Facebook :</strong> 
-                        <a href="https://www.facebook.com/sitluangpormai" target="_blank" style="color: #1877F2; text-decoration: none; font-weight: 500;">เพจวัดป่าเขาภูหลวง</a>
-                    </p>
-                    <p>
-                        <strong>ที่อยู่ :</strong> ถนนโยธาธิการ ต.ระเริง อ.วังน้ำเขียว จ.นครราชสีมา
-                    </p>
-                </div>
+<main class="donate-main">
 
-                <div class="map-embed">
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15443.085023964115!2d101.81057471675271!3d14.612140411802956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311ea345ca52ab65%3A0x1bd0701050e1bfe3!2z4Lin4Lix4LiU4Lib4LmI4Liy4LmA4LiC4Liy4Lig4Li54Lir4Lil4Lin4LiHIChFjYmD4Lib4Li54LmI4LmE4LihKQ!5e0!3m2!1sth!2sth!4v1712668581234!5m2!1sth!2sth" 
-                        width="100%" 
-                        height="250" 
-                        style="border:0; border-radius: 12px; margin-top: 20px;" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                </div>
-                
-                <div style="margin-top: 30px;">
-                    <a href="https://goo.gl/maps/sYjhA1Bx4KXVGBxV8" target="_blank" class="btn-copy" style="background-color: #4285F4;">นำทางด้วย Google Maps</a>
-                </div>
-            </div>
-            
-        </div>
-    </section>
+  <section class="section-block">
+    <div class="section-head">
+      <span class="sec-num">01</span>
+      <div>
+        <h2 class="sec-title">โอนเงินร่วมทำบุญ</h2>
+        <p class="sec-desc">คัดลอกเลขบัญชีเพื่อทำรายการผ่าน Mobile Banking ได้ทุกธนาคาร</p>
+      </div>
+    </div>
 
-    <footer>
-        <p>&copy; 2026 วัดป่าเขาภูหลวง. All Rights Reserved.</p>
-        <div class="brand-credit">Designed & Developed by GUS CREATIVE</div>
-    </footer>
+    <div class="simple-donate-card">
+      <div class="bank-icon-large">K</div>
+      <h3 class="bank-name">ธนาคารกสิกรไทย</h3>
+      <p class="acc-name">ชื่อบัญชี: <b>วัดป่าเขาภูหลวง</b></p>
+      
+      <div class="acc-box">
+        <span class="acc-number">106-3-53122-3</span>
+        <button class="btn-copy-main" onclick="copyText('1063531223', 'คัดลอกเลขบัญชีเรียบร้อย ✓')">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+          คัดลอกเลขบัญชี
+        </button>
+      </div>
 
-    <script src="donate.js"></script>
+      <div class="promptpay-box">
+        <span>พร้อมเพย์: <b>098-958-3689</b> (พระอมร)</span>
+        <button class="btn-copy-small" onclick="copyText('0989583689', 'คัดลอกเบอร์พร้อมเพย์เรียบร้อย ✓')">คัดลอก</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-block section-alt">
+    <div class="section-head">
+      <span class="sec-num">02</span>
+      <div>
+        <h2 class="sec-title">ติดต่อวัด & การเดินทาง</h2>
+        <p class="sec-desc">ข้อมูลสำหรับผู้ที่ต้องการเดินทางมาวัดหรือติดต่อสอบถาม</p>
+      </div>
+    </div>
+
+    <div class="contact-row">
+      <a href="tel:0989583689" class="contact-pill">
+        <div class="c-icon phone-icon">📞</div>
+        <div><small>โทรศัพท์ (พระอมร)</small><b>098-958-3689</b></div>
+      </a>
+      <a href="https://www.facebook.com/sitluangpormai" target="_blank" class="contact-pill">
+        <div class="c-icon fb-icon">📘</div>
+        <div><small>Facebook</small><b>เพจวัดป่าเขาภูหลวง</b></div>
+      </a>
+      <div class="contact-pill no-link">
+        <div class="c-icon map-icon">📍</div>
+        <div><small>ที่ตั้งวัด</small><b>ต.ระเริง อ.วังน้ำเขียว โคราช</b></div>
+      </div>
+    </div>
+
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115132.88046399127!2d101.691765!3d14.545163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311c47091deec6a1%3A0xeae06c8272635a6!2z4Lin4Lix4LiU4Lib4LmI4Liy4LmA4LiC4Liy4Lig4Li54Lir4Lil4Lin4LiH!5e0!3m2!1sth!2sth!4v1700000000000!5m2!1sth!2sth"
+        width="100%" height="300" style="border:0;border-radius:20px; box-shadow: 0 8px 30px rgba(0,0,0,0.06);" allowfullscreen loading="lazy">
+      </iframe>
+      <div class="map-btn-wrapper">
+        <a href="https://goo.gl/maps/sYjhA1Bx4KXVGBxV8" target="_blank" class="btn-maps">🗺️ นำทางด้วย Google Maps</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-in">
+    <div class="footer-logo">วัดป่าเขาภูหลวง</div>
+    <p>© 2026 วัดป่าเขาภูหลวง. All Rights Reserved.</p>
+    <div class="footer-credit">Designed & Developed by GUS </div>
+  </div>
+</footer>
+
+<div id="toast" class="toast"></div>
+<script src="donate.js"></script>
 </body>
 </html>
